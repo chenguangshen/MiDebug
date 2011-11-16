@@ -1,0 +1,3 @@
+cd /home/nesl/workspace_ee/CloudCompiler/stm_h103
+make clean
+make

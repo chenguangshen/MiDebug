@@ -1,0 +1,2 @@
+cd /home/nesl/workspace_ee/CloudCompiler/script
+openocd -f openocd-usb.cfg -f lpc1769.cfg

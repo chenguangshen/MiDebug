@@ -1,0 +1,2 @@
+cd /home/nesl/robovero/firmware/contrib
+openocd -f openocd-usb.cfg -f lpc1769.cfg

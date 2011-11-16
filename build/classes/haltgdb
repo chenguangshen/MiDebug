@@ -1,0 +1,3 @@
+killall arm-bare_newlib_cortex_m3_nommu-eabi-gdb
+killall arm-none-eabi-gdb
+killall openocd

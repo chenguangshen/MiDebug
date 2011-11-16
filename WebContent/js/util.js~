@@ -1,0 +1,26 @@
+function createProject(){
+	var pname=prompt("Input name for the new project:", "");
+	if(pname){
+		var xmlhttp;
+		if (window.XMLHttpRequest){
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+  			xmlhttp=new XMLHttpRequest();
+  		}
+		else{
+			// code for IE6, IE5
+  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  		}
+	
+		xmlhttp.open("GET","http://127.0.0.1:8080/CloudCompiler/ProjectManager?type=newpj&name="+pname, true);
+	
+		xmlhttp.onreadystatechange=function(){
+//		alert("ready state=" + xmlhttp.readyState + ", http status=" + xmlhttp.status);
+  			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+  				//document.write(xmlhttp.responseText);
+  				alert(xmlhttp.responseText);
+    			document.getElementById("code").innerHTML=xmlhttp.responseText;
+    		}
+  		};
+		xmlhttp.send(null);
+	}
+}

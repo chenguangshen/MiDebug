@@ -1,0 +1,4 @@
+sleep 1
+(echo "reset halt"; sleep 1; echo "flash probe 0"; sleep 1; echo "stm32x mass_erase 0"; sleep 2; echo "flash write_bank 0 /home/nesl/workspace_ee/CloudCompiler/stm_h103/main.bin 0"; sleep 2; echo "reset run"; sleep 1; echo "exit") | telnet localhost 4444
+killall openocd
+killall bash

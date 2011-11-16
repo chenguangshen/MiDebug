@@ -1,0 +1,3 @@
+cd /home/nesl/workspace_ee/CloudCompiler/build_env
+make clean
+make

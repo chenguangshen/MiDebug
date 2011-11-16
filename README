@@ -1,0 +1,10 @@
+CloudCompiler: A Rapid Prototyping and Prototyping Platform for Embedded Programming
+
+Developer: Chenguang Shen', Henry Herman, Zainul Charbiwala, Mani. B. Srivastava
+
+This work was developed by Chenguang Shen during his visiting at Networked and Embedded Systems Labarotary (NESL), University of California, Los Angeles (UCLA).
+
+    * CloudCompiler  is a rapid prototyping platform for programming and debugging embedded hardware, and provides a convenient web-based IDE for development.
+    * Traditionally, programmers use cross-compile to program microcontrollers, which requires lots of time and effort installing tools on native computer. Also sometimes it is hard to access deeply embedded processors. Mbed.org and other online compilers provide a better way, but they still have many drawbacks. Mbed compiler can only support mbed hardware, and programmers cannot debug the program using only binary file.
+    * Therefore,  we proposed CloudCompiler, a rapid prototyping and debugging tool for embedded programming. All tools and libraries were moved to the cloud server, and the user could edit and run code through a browser. We used FT2232D to bridge JTAG and USB, and OpenOCD acted as the driver for USB JTAG programming. We proposed two approaches for program/debug microcontrollers:
+  

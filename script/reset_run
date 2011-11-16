@@ -1,0 +1,1 @@
+(echo "reset run"; sleep 1; echo "reset run"; sleep 1; echo "exit") | telnet localhost 4444

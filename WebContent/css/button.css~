@@ -1,0 +1,93 @@
+.w3cbutton {
+  width: 10em;
+  height: 2.8em;
+  margin-right: 1.5em;
+  font-family: sans-serif;
+  font-size: 70%;
+  font-weight: bold;
+  display: inline-block;
+}
+.w3cbutton a {
+  display: block;
+  width: 10em;
+  height: 2.8em;
+}
+.w3cbutton a:link,
+.w3cbutton a:visited,
+.w3cbutton a:hover {
+  #background-color: #fc6;
+  color: #000;
+  text-decoration: none;
+}
+.w3cbutton a:link,
+.w3cbutton a:visited {
+  border-top: 1px solid #cecece;
+  border-bottom: 2px solid #4a4a4a;
+  border-left: 1px solid #cecece;
+  border-right: 2px solid #4a4a4a;
+}
+.w3cbutton a:hover {
+  border-bottom: 1px solid #cecece;
+  border-top: 2px solid #4a4a4a;
+  border-right: 1px solid #cecece;
+  border-left: 2px solid #4a4a4a;
+}
+.w3cbutton span.w3c {
+  margin-left: 2px;
+  padding-left: 1em;
+  padding-bottom: 1.4em;
+  padding-right: 1.7em;
+  height: 2.8em;
+}
+
+#newpj {
+	background-image: url(../image/newpj.png);
+}
+
+#new {
+	background-image: url(../image/new.png);
+}
+
+#save {
+	background-image: url(../image/save.png);
+}
+
+#compile {
+	background-image: url(../image/compile.png);
+}
+
+#run {
+	background-image: url(../image/run.png);
+}
+
+#debug {
+	background-image: url(../image/debug.png);
+}
+
+#search {
+	background-image: url(../image/search.png);
+}
+
+#replace {
+	background-image: url(../image/replace.png);
+}
+
+#undo {
+	background-image: url(../image/undo.png);
+}
+
+#redo {
+	background-image: url(../image/redo.png);
+}
+
+#commit {
+	background-image: url(../image/commit.png);
+}
+
+#update {
+	background-image: url(../image/update.png);
+}
+
+#print {
+	background-image: url(../image/print.png);
+}

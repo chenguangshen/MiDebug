@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CloudCompiler Editor</title>
+    <link rel="stylesheet" href="css/codemirror.css">    
+    <link rel="stylesheet" href="css/neat.css">    
+    <link rel="stylesheet" href="css/default.css">    
+    <link rel="stylesheet" href="css/elegant.css">
+    <link rel="stylesheet" href="css/night.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/basic.css">
+    
+     
+	<script type="text/javascript" src="js/codemirror.js"></script>	 
+	<script type="text/javascript" src="js/clike.js"></script>
+
+	
+	 
+  	 <link rel="stylesheet" type="text/css" href="css/fonts-min.css" />
+<!--  	 <link rel="stylesheet" type="text/css" href="css/treeview.css" />
+	 <link rel="stylesheet" type="text/css" href="css/tree.css">
+	 
+	 <script type="text/javascript" src="js/yahoo-dom-event.js"></script>
+	 <script type="text/javascript" src="js/treeview-min.js"></script>  -->
+	 
+	 
+	 <script type="text/javascript" src="js/jquery.js"></script>
+	 <script type="text/javascript" src="js/jquery.jstree.js"></script>
+	 <script type="text/javascript" src="js/ctl.js"></script>
+	 
+	 <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+	 <script type='text/javascript' src='js/basic.js'></script>
+	 
+	 
+
+  </head>
+  
+  <body>
+  <object id="plugin0" type="application/x-cloudcmplocalconn" width="0" height="0" style="visibility:hidden">
+    <param name="onload" value="pluginLoaded" />
+  </object>
+  
+   <div id="header" class="header">Choose Project and File </div>
+   <div id="header_chg" class="header_chg"></div>
+   <div id="main" class="main">
+   <script src="js/util.js"></script>
+
+	<div id="func" class="func">
+		<!-- <button type="submit" onclick="loadXMLDoc()"/> -->
+		<span id = "bt_newpj" class="w3cbutton">
+      	<a href="">
+      		<span id="newpj" class="w3c"></span> 
+      		<span class="spec">New Project</span>
+      	</a>
+      </span>
+	
+		<span id = "bt_new" class="w3cbutton">
+      	<a href="">
+      		<span id="new" class="w3c"></span> 
+      		<span class="spec">New File</span>
+      	</a>
+      </span>
+      
+      <span id="bt_save" class="w3cbutton">
+      	<a href="">
+      		<span id="save" class="w3c"></span> 
+      		<span class="spec">Save</span>
+      	</a>
+      </span>
+      
+      <span id ="bt_compile" class="w3cbutton">
+      	<a href="">
+      		<span id="compile" class="w3c"></span> 
+      		<span class="spec">Compile</span>
+      	</a>
+      </span>
+      
+      <span id="bt_run" class="w3cbutton">
+      	<a href="">
+      		<span id="run" class="w3c"></span> 
+      		<span class="spec">Run</span>
+      	</a>
+      </span>
+      
+      <span id="bt_debug" class="w3cbutton">
+      	<a href="">
+      		<span id="debug" class="w3c"></span> 
+      		<span class="spec">Debug</span>
+      	</a>
+      </span>
+      
+      <div id="basic-modal-content">
+			<h3>Select Target Device</h3>
+			<p>You can select target device to debug/run from the following list:</p>
+			<form id="device_list">
+			</form> 
+			<p><a href='#' id='debug_select'>Select</a></p>
+		</div>
+
+		<!-- preload the images -->
+		<div style='display:none'>
+			<img src='image/x.png' alt='' />
+	  </div>
+      
+<!--        <span class="w3cbutton">
+      	<a href="">
+      		<span id="undo" class="w3c"></span> 
+      		<span class="spec">Undo</span>
+      	</a>
+      </span>
+      
+		 <span class="w3cbutton">
+      	<a href="">
+      		<span id="redo" class="w3c"></span> 
+      		<span class="spec">Redo</span>
+      	</a> 
+      </span>  -->    
+      
+      <span id="bt_search" class="w3cbutton">
+      	<a href="">
+      		<span id="search" class="w3c"></span> 
+      		<span class="spec">Search</span>
+      	</a>
+      </span>
+      
+      <span id="bt_replace" class="w3cbutton">
+      	<a href="">
+      		<span id="replace" class="w3c"></span> 
+      		<span class="spec">Replace</span>
+      	</a>
+      </span>
+      
+      <span id="bt_commit" class="w3cbutton">
+      	<a href="">
+      		<span id="commit" class="w3c"></span> 
+      		<span class="spec">Commit</span>
+      	</a>
+      </span>
+      
+      <span class="w3cbutton">
+      	<a href="">
+      		<span id="update" class="w3c"></span> 
+      		<span class="spec">Update</span>
+      	</a>
+      </span>
+      
+ <!-- <span id="bt_print" class="w3cbutton">
+      	<a href="">
+      		<span id="print" class="w3c"></span> 
+      		<span class="spec">Print</span>
+      	</a>
+      </span>
+-->
+
+	</div>    
+    
+    <div id="explore" class="explore">
+    	<div id="explore_header" class="explore_header">Projects</div>
+		<div id="treeDiv1">
+		</div> 
+    </div>
+
+<form>
+	<textarea id="code" name="code"></textarea>
+</form>
+
+<script type="text/javascript" src="js/func.js"></script>
+
+
+<div id="console_header" class="console_header">Console
+
+	
+<!--   	<span id="debug_local_exit" class="bt_button"><a href="#">LQuit</a></span>
+	<span id="debug_local_halt" class="bt_button"><a href="#">Halt</a></span>
+	<span id="debug_local_cont" class="bt_button"><a href="#">LCont</a></span>
+	<span id="debug_local_file" class="bt_button"><a href="#">LFile</a></span> -->
+	<span id="debug_quit" class="bt_button"><a href="#">Quit</a></span>
+	<span id="debug_print" class="bt_button"><a href="#">Print</a></span>
+	<span id="debug_frame" class="bt_button"><a href="#">Frame</a></span>
+	<span id="debug_info" class="bt_button"><a href="#">Info</a></span>
+	<span id="debug_next" class="bt_button"><a href="#">Step</a></span>
+	<span id="debug_cont" class="bt_button"><a href="#">Cont</a></span>
+	
+	<form id="selectform" class="bt_sel">
+	<select id="platform" size="1">
+	<option value="NXP LPC1769" selected="selected">NXP LPC1769</option>
+	<option value="ARM STM32">ARM STM32</option>
+	</select>
+	</form>
+	
+</div>
+<div id="console" class="console">
+	
+</div>
+<!-- 
+<div id="footer_cln" class="footer">
+col N
+</div>
+
+<div id="footer_row" class="footer">
+ln N
+</div>
+ -->
+<div id="footer_trow" class="footer">
+Line/Total
+</div>
+
+<div id="ins_sta" class="footer">
+0/0
+</div>
+
+<div id="status" class="footer">
+Ready
+</div>
+
+
+</div>
+    
+  </body>
+</html>

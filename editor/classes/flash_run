@@ -1,0 +1,5 @@
+(echo "reset halt"; sleep 1; echo "flash erase_sector 0 0 0"; sleep 2; echo "flash write_bank 0 /home/nesl/robovero/firmware/firmware.bin 0"; sleep 40; echo "reset run"; sleep 1; echo "exit") | telnet localhost 4444
+killall openocd
+
+
+
